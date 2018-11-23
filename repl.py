@@ -1,5 +1,7 @@
 # source code for repl
 
+__version__ = "v.0.1.0"
+
 def repl(parser, style="chevron"):
     """
     Displays a REPL in stdin/stdout/stderr.
