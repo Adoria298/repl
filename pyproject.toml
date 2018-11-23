@@ -1,0 +1,11 @@
+[build-system]
+requires = ["flit"]
+build-backend = "flit.buildapi"
+
+[tool.flit.metadata]
+module = "repl"
+author = "Adoria298"
+author-email = "bananorange29@outlook.com"
+home-page = "https://www.github.com/Adoria298/repl"
+classifiers = ["License :: OSI Approved :: MIT License"]
+

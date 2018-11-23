@@ -1,4 +1,6 @@
-# source code for repl
+"""
+Package for generating REPLs for DSLs.
+"""
 
 __version__ = "v.0.1.0"
 
