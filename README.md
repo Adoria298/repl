@@ -17,22 +17,17 @@ REPL within a repl!
 ````
 ## Installation
 
-````sh
-$ python3 -m pip install rep
-````
-
-Or build from source:
+Clone from Github:
 
 ````sh
 $ git clone "git.github.com/Adoria298/repl"
-$ python3 -m pip install -r requirements.txt
-$ python3 setup.py
 ````
 
 ## To Do:
 
-- Make basic functionality.
-- Correct README.md
 - Upload to Github
 - Upload to PyPi
 - Allow REPL customisation.
+    - Different prompt
+    - Change default output
+    - Colour coding?
