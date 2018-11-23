@@ -25,7 +25,7 @@ def repl(parser, style="chevron"):
         "in/out": {
             "line_nums": True,
             "in": "In[{0}]: ",
-            "out": "Out[{0}]: "
+            "out": "Out[{0}]: " # when possible
         }
     }
     profig = prompt[style] # prompt config - to save typing
@@ -49,5 +49,5 @@ def repl(parser, style="chevron"):
 
 # manual tests
 if __name__ == "__main__":
-    #repl(eval) # allows developer to check their changes in default repl
-    repl(eval, "in/out")
+    repl(eval) # allows developer to check their changes in default repl
+    #repl(eval, "in/out")
