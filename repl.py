@@ -1,6 +1,21 @@
 # source code for repl
 
 def repl(parser, style="chevron"):
+    """
+    Displays a REPL in stdin/stdout/stderr.
+
+    Parameters:
+        parser: function - a parser, e.g. eval(), that takes a line of code.
+        style: string - the prompt style. Defaults to "chevron".
+            options:
+                "chevron" - a single chevron "> " for input, no output indicator
+                "in/out"  - displays "In[<line number>]: " for input, the 'In' is replaced with 'Out' for output.
+    Returns:
+    
+    None
+
+    """
+    # config
     prompt = {
         "chevron": {
             "line_nums": False,
@@ -20,6 +35,7 @@ def repl(parser, style="chevron"):
     else: 
         line_nums = False
 
+    # actual config
     while True:
         if line_nums:
             prompt_str = profig["in"].format(line_num)
