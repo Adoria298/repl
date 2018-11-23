@@ -27,6 +27,6 @@ $ git clone "git.github.com/Adoria298/repl"
 
 - Upload to PyPi
 - Allow REPL customisation.
-    - Different prompt
+    - Output prompt
     - Change default output
     - Colour coding?
