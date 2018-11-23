@@ -11,7 +11,7 @@ As a python REPL:
 ````python
 >>> from repl import repl
 >>> repl(eval)
-> print("REPL within a repl!")
+> print("REPL within a REPL!")
 REPL within a repl!
 > 
 ````
@@ -25,7 +25,6 @@ $ git clone "git.github.com/Adoria298/repl"
 
 ## To Do:
 
-- Upload to Github
 - Upload to PyPi
 - Allow REPL customisation.
     - Different prompt
