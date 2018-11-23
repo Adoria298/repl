@@ -4,8 +4,14 @@ build-backend = "flit.buildapi"
 
 [tool.flit.metadata]
 module = "repl"
+dist-name = "dsl-repl"
 author = "Adoria298"
 author-email = "bananorange29@outlook.com"
 home-page = "https://www.github.com/Adoria298/repl"
-classifiers = ["License :: OSI Approved :: MIT License"]
+description-file = "README.md"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3"
+]
+
 
