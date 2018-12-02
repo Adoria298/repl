@@ -9,7 +9,7 @@ def repl(parser, style="chevron"):
     Displays a REPL in stdin/stdout/stderr.
 
     Parameters:
-        parser: function - a parser, e.g. eval(), that takes a line of code.
+        parser: function - a parser, e.g. eval(), that takes a line of code, and returns printable output
         style: string - the prompt style. Defaults to "chevron".
             options:
                 "chevron" - a single chevron "> " for input, no output indicator
@@ -28,8 +28,8 @@ def repl(parser, style="chevron"):
         },
         "in/out": {
             "line_nums": True,
-            "in": "In[{0}]: ",
-            "out": "Out[{0}]: " # when possible
+            "in": "In[{0}]:",
+            "out": "Out[{0}]:" # when possible
         }
     }
     profig = prompt[style] # prompt config - to save typing
@@ -42,16 +42,22 @@ def repl(parser, style="chevron"):
     # actual config
     while True:
         if line_nums:
-            prompt_str = profig["in"].format(line_num)
+            in_str = profig["in"].format(line_num)
             line_num += 1
-            parser(input(prompt_str))
-            # TODO(adoria298): allow out prompts as well
-            line_num += 1 
+            out_str = profig["out"].format(line_num)
+            line_num += 1
         else:
-            prompt_str = profig["in"]
-            parser(input(prompt_str))
+            in_str = profig["in"]
+            out_str = profig["out"]
+        output = parser(input(in_str))
+        print(out_str, output)
 
 # manual tests
 if __name__ == "__main__":
-    repl(eval) # allows developer to check their changes in default repl
-    #repl(eval, "in/out")
+    #repl(eval) # allows developer to check their changes in default repl
+    def test_parser(line):
+        if line == "greet":
+            return "hi"
+        else:
+            return "incorrect"
+    repl(test_parser, "in/out")
